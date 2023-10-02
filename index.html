@@ -67,10 +67,17 @@
 
                 var avgHeight = 5.75
                 var avgLength = 5.16
+                var avgLengthF = 3.6
+                var avgGirthE = 4.59
+                var avgGirthF = 3.66
 
                 var multiplier = combinedHeight / avgHeight
-                
-                $("#length").val(avgLength * multiplier)
+                //Math.round((num + Number.EPSILON) * 100) / 100
+
+                $("#length").val(Math.round(((avgLength * multiplier)+ Number.EPSILON) * 100) / 100)
+                $("#lengthf").val(Math.round(((avgLengthF * multiplier)+ Number.EPSILON) * 100) / 100)
+                $("#girth").val(Math.round(((avgGirthE * multiplier)+ Number.EPSILON) * 100) / 100)
+                $("#girthf").val((Math.round(((avgGirthF * multiplier)+ Number.EPSILON) * 100) / 100))
 
                 return false;
             }
@@ -80,7 +87,11 @@
             <input style="width: 100px;" type="number" id="height1" name="height1">
             <input style="width: 100px;" type="number" id="height2" name="height2"><br>
             <label for="lname">Length</label><br>
-            <input type="text" id="length" name="length">
+            <input style="width: 100px;" type="text" id="length" name="length">
+            <input style="width: 100px;" type="text" id="lengthf" name="lengthf"><br>
+            <label for="lname">Girth</label><br>
+            <input style="width: 100px;" type="text" id="girth" name="girth">
+            <input style="width: 100px;" type="text" id="girthf" name="girthf">
             <input type="submit" value="Submit">
           </form> 
     </div>

@@ -58,7 +58,12 @@
             function onSubmit(){
                 var height1 = $("#height1").val();
                 var height2 = $("#height2").val();
-                var combinedHeight = height1 + height2/12;
+                var combinedHeight = Number(height1) + (height2/12);
+                
+                console.log(combinedHeight)
+                console.log(height1)
+                console.log(height2/12)
+                console.log(height1 + (height2/12))
 
                 var avgHeight = 5.75
                 var avgLength = 5.16

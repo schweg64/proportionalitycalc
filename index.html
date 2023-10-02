@@ -50,7 +50,33 @@
             </ul>
         </div>  
     </nav>
+
+
+
     <div class="container-fluid d-flex justify-content-center align-items-center py-4">
-          
+        <script>
+            function onSubmit(){
+                var height1 = $("#height1").val();
+                var height2 = $("#height2").val();
+                var combinedHeight = height1 + height2/12;
+
+                var avgHeight = 5.75
+                var avgLength = 5.16
+
+                var multiplier = combinedHeight / avgHeight
+                
+                $("#length").val(avgLength * multiplier)
+
+                return false;
+            }
+        </script>
+        <form onsubmit="return onSubmit();">
+            <label for="fname">Character Height</label><br>
+            <input style="width: 100px;" type="number" id="height1" name="height1">
+            <input style="width: 100px;" type="number" id="height2" name="height2"><br>
+            <label for="lname">Length</label><br>
+            <input type="text" id="length" name="length">
+            <input type="submit" value="Submit">
+          </form> 
     </div>
 </body>

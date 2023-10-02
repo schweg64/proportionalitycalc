@@ -1,0 +1,52 @@
+html{
+    background-color:rgb(30, 34, 34);
+}
+.container-fluid{
+    background-color:rgb(159, 191, 224);
+}
+nav{
+    background-color:rgb(40,44,44);
+}
+.nav-link{
+    color:rgb(170, 170, 170);
+}
+.nav-item.active .nav-link{
+    color:rgb(230, 230, 230);
+}
+.nav-link:hover{
+    color:rgb(255, 255, 255);
+}
+.nav-item.active .nav-link:hover{
+    color:rgb(255, 255, 255);
+}
+.ri-menu-line{
+    color:gray;
+}
+
+.card-header{
+    font-weight: bold;
+}
+
+#ego{
+    width:250px;
+    display:none;
+}
+#titlecard{
+    display:none;
+}
+
+@media only screen and (min-width:651px){
+    .proj-row .card{
+        width:45%;
+    }
+}
+@media only screen and (max-width:1000px){
+    #edu{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width:650px){
+    .proj-row{
+        flex-direction: column;
+    }
+}
